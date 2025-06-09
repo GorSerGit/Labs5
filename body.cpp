@@ -8,9 +8,9 @@ Body::Body(int dimensions) {
     coordinates.resize(dimensions, 0.0);
 }
 
-void Body::move(int axis) {
+void Body::move(int axis, float direction = 1.0f) {
     if (axis >= 0 && axis < static_cast<int>(coordinates.size())) {
-        coordinates[axis] += 1.0;
+        coordinates[axis] += direction * 1.0f; // direction может быть 1 или -1
     }
 }
 
